@@ -1,0 +1,11 @@
+import os
+print(os.name)
+print(os.getenv('PYTHONPATH'))
+print(os.getlogin())
+print(os.getpid)
+print(os.getppid())
+print(os.cpu_count())
+print(os.sep)
+print(os.pathsep)
+print(os.linesep)
+print(os.urandom(3))

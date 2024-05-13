@@ -1,0 +1,34 @@
+添加var jsonData = pm.response.json();
+pm.test("试卷ID应该存在并且不为空", function () {
+    pm.expect(jsonData.id).to.be.an('string');
+    pm.expect(jsonData.id).to.not.be.empty;
+});
+三毛流浪记 17:17:39
+登录pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Response should contain token", function () {
+    pm.response.to.have.jsonBody('token');
+});
+三毛流浪记 17:17:48
+删除pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Response should contain message", function () {
+    pm.response.to.have.jsonBody('message');
+});
+
+接口并联
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Status code name has ok", function () {
+    pm.response.to.have.status("OK");
+});
+var i = pm.response.json()
+console.log(i)
+var id = i.response.id
+pm.globals.set("id", id);
